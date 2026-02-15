@@ -42,6 +42,14 @@ ALL messages follow a standardized 'rtems_msg_t' structure:
 	sparc-rtems-gcc -02 -c *.c
 3. Link with the RTEMS executive and deploy to the target hardware or QEMU.
 
+## Sensor test software
+
+A simple host-side validation program was added at `tools/sensor_test.c` to verify raw-byte to engineering-units conversion:
+
+```bash
+gcc -Iinclude tools/sensor_test.c src/sensor_data.c -o sensor_test
+./sensor_test
+```
+
 ## License
 This project uese the GNU 3.0 LICENCE and is developed for educational and aerospace research purposes.
-
